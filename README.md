@@ -1,16 +1,13 @@
-# search_scan_sql
+# search_scan_sql 0.0.1
 
-A new Flutter project.
+This is an application that can be used to look up data on a database on a local device, and display it on the screen.  It has an existing use in a different capacity, that probably isn't difficult to determine, but it's designed to be searched either via the `Author` or `Title` fields, unless the search term is 13 characters in length and are all numeric, in which case it searches the `isbnList` column for a match.
 
-## Getting Started
+I've included a number of barcodes whose ISBN numbers already exist in the database (though the books don't match up, b/c I just made up fake ones for example purposes). Look for these as images in the `/assets/barcodes` directory.
 
-This project is a starting point for a Flutter application.
+## Under the Hood
 
-A few resources to get you started if this is your first Flutter project:
+A local SQLite3 database is kept in `assets` directory, along with it's suggested db schema. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Scan works, but additional work would need to be done to local environments in both iOS && Android. If you're just building locally it should be fine. See: https://pub.dev/packages/barcode_scan
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
